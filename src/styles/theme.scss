@@ -1,0 +1,18 @@
+@import './definitions.scss';
+@import '~bootstrap/scss/bootstrap';
+
+.nav-pills .nav-link.active {
+    background-color: $primary !important;
+}
+
+.tip-amount-incomplete:hover {
+    background-color: $danger;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.tip-amount-complete:hover {
+    background-color: $success;
+    color: #FFF;
+    cursor: pointer;
+}

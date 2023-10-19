@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "React Chat Extension",
+    "description": "Hopefully a nicer chat Experience",
+    "version": "1.0.0",
+    "permissions": ["storage"],
+    "host_permissions": ["https://sample.site/*"],
+    "externally_connectable": {
+        "matches": ["https://*.sample.site/*"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://sample.site/livecam.php?PosterName*"],
+            "js": ["contentscript.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [],
+            "matches": ["https://*.sample.site/*"]
+        }
+    ]
+  }

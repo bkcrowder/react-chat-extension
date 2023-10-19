@@ -1,0 +1,31 @@
+@import '../../styles/definitions.scss';
+
+.callout {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+code {
+    border-radius: 3px;
+}
+& + .bs-callout {
+    margin-top: -5px;
+}
+}
+
+@each $name,$color in (default, $default),(primary,$primary),(success,$success),(danger,$danger),(warning,$warning),(info,$info) {
+    .callout-#{$name} {
+        border-left-color: $color;
+        h4 {
+        color: $color;
+        }
+    }
+}
